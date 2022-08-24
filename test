@@ -1,0 +1,24 @@
+#!/usr/bin/sh
+T_NAMESPACE=pem
+COMPNENT_NAME=pem
+#Run following two scripts
+#oc apply -f ./pre-install-steps/security-context-constraints.yaml -n $T_NAMESPACE
+#oc apply -f ./pre-install-steps/cluster-role.yaml -n $T_NAMESPACE
+
+#./$COMPNENT_NAME/ibm_cloud_pak/pak_extensions/pre-install/clusterAdministration/createSecurityClusterPrereqs.sh
+
+
+#./$COMPNENT_NAME/ibm_cloud_pak/pak_extensions/pre-install/namespaceAdministration/createSecurityNamespacePrereqs.sh $T_NAMESPACE
+helm uninstall pem6201 -n $T_NAMESPACE
+oc delete -f ./pre-install-steps/persistent-volume-claim-ibm-pem-pvc.yaml -n $T_NAMESPACE
+oc delete -f ./pre-install-steps/persistent-volume-claim-ibm-pem-pvc-input.yaml -n $T_NAMESPACE
+oc delete -f ./pre-install-steps/secret-ibm-pem-secret.yaml -n $T_NAMESPACE
+oc delete -f ./pre-install-steps/secret-ibm-pem-certs-secret.yaml -n $T_NAMESPACE
+
+
+oc apply -f ./pre-install-steps/persistent-volume-claim-ibm-pem-pvc.yaml -n $T_NAMESPACE
+oc apply -f ./pre-install-steps/persistent-volume-claim-ibm-pem-pvc-input.yaml -n $T_NAMESPACE
+oc apply -f ./pre-install-steps/secret-ibm-pem-secret.yaml -n $T_NAMESPACE
+oc apply -f ./pre-install-steps/secret-ibm-pem-certs-secret.yaml -n $T_NAMESPACE
+
+helm install pem -f ./my-values.yaml ./$COMPNENT_NAME-chart -n $T_NAMESPACE
