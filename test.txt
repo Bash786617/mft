@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+
+<style>
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+ 
+
+/* Create two equal columns that floats next to each other */
+
+.column {
+
+  float: left;
+
+  width: 35%;
+
+  padding: 10px;
+
+ 
+
+}
+
+ 
+
+/* Clear floats after the columns */
+
+.row:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="row">
+
+<div class="column" >
+
+<h2> MFT SIT Links</h2>
+
+<p><a href=https://nj:8081/dashboard/portal/>MFTT</a></p>
+
+ 
+
+</div>
+
+ 
+
+<div class="column" >
+
+<h2> MFT UAT Links</h2>
+
+<p><a href=https://sff:8081/dashboard/portal/>MFTT</a></p>
+
+< 
+
+</div>
+
+ 
+
+<div class="column" >
+
+<h2> MFT PRD Links</h2>
+
+<p><a href=https://na.com:8081/dashboard/portal>MFTRD</a></p>
+
+ 
+
+</div>
+
+ 
+
+<div class="column" >
+
+<h2> SCC Links</h2>
+
+<p><a href=https://s.com:58082/>C IT</a></p>
+
+ 
+
+</div>
+
+ 
+
+ 
+
+<div class="column" >
+
+<h2> TCC Links</h2>
+
+<p><a href=http://niob.com:58082/>C DEV</a></p>
+
+<p><a href=http://can.c:58082/>TD</a></p>
+
+</div>
+
+ 
+
+ 
+
+<div class="column" >
+
+<h2> GIS Links</h2>
+
+<p><a href=https://gissit.um:10001/dashboard/>IT</a></p>
+
+ 
+
+</div>
+
+ 
+
+<div class="column" >
+
+<h2> Tidal Links</h2>
+
+<p><a href=https://tit/console.html?locale=en>Tl DEV</a></p>
+
+> 
+
+</div>
+
+ 
+
+<div class="column" >
+
+<h2> Service Now</h2>
+
+<p><a href=https://mub.serv-now.com/>SNOW</a></p>
+
+ 
+
+</div>
+
+ 
+
+<div class="column" >
+
+<h2> BPM Eform</h2>
+
+<p><a href=https://mst.bn.com:8543/>orm</a></p>
+
+</div>
+
+ 
+
+ 
+
+</body>
+
+</html>
+
